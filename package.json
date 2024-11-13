@@ -24,7 +24,8 @@
     "lint": "eslint 'src/**'",
     "lint:fix": "eslint src/** test/** --fix",
     "prepublishOnly": "npm run build",
-    "build": "tsc"
+    "build": "tsc",
+    "release": "npm run build && npm publish --access public"
   },
   "devDependencies": {
     "chai": "^4.0.0",
