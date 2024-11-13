@@ -5,7 +5,7 @@ geohash
 <p>
 <a href="https://twitter.com/stefanodecillis" rel="nofollow"><img src="https://img.shields.io/badge/created%20by-@stefanodecillis-4BBAAB.svg" alt="Created by Stefano De Cillis"></a>
 <a href="https://opensource.org/licenses/MIT" rel="nofollow"><img src="https://img.shields.io/github/license/stefanodecillis/node-geohash" alt="License"></a>
-<a href="https://www.npmjs.com/package/node-geohash" rel="nofollow"><img src="https://img.shields.io/npm/dw/zod.svg" alt="npm"></a>
+<a href="https://www.npmjs.com/package/node-geohash" rel="nofollow"><img src="https://img.shields.io/npm/dw/node-geohash.svg" alt="npm"></a>
 <a href="https://github.com/stefanodecillis/node-geohash" rel="nofollow"><img src="https://img.shields.io/github/stars/stefanodecillis/node-geohash" alt="stars"></a>
 </p>
 
