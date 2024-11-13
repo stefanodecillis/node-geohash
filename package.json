@@ -3,7 +3,7 @@
   "description": "Gustavo Niemeyer’s geocoding system in a single library",
   "homepage": "http://www.movable-type.co.uk/scripts/geohash.html",
   "author": "Stefano De Cillis",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
