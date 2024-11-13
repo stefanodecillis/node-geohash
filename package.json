@@ -1,26 +1,49 @@
 {
-  "name": "latlon-geohash",
-  "description": "Gustavo Niemeyer’s geocoding system",
+  "name": "node-geohash",
+  "description": "Gustavo Niemeyer’s geocoding system in a single library",
   "homepage": "http://www.movable-type.co.uk/scripts/geohash.html",
-  "author": "Chris Veness",
-  "version": "2.0.0",
+  "author": "Stefano De Cillis",
+  "version": "1.0.0",
   "license": "MIT",
-  "type": "module",
-  "main": "latlon-geohash.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/chrisveness/latlon-geohash"
   },
-  "keywords": [ "geohash", "geocode", "geolocation", "latitude", "longitude" ],
+  "keywords": [
+    "geohash",
+    "geocode",
+    "geolocation",
+    "latitude",
+    "longitude"
+  ],
   "scripts": {
     "test": "mocha --exit -r esm test.js",
-    "lint": "eslint latlon-geohash.js"
+    "lint": "eslint 'src/**'",
+    "lint:fix": "eslint src/** test/** --fix",
+    "prepublishOnly": "npm run build",
+    "build": "tsc"
   },
   "devDependencies": {
     "chai": "^4.0.0",
-    "eslint": "^6.0.0",
     "esm": "^3.0.0",
-    "mocha": "^6.0.0"
+    "mocha": "^6.0.0",
+    "@types/node": "^20.14.12",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-promise": "^6.6.0",
+    "jest": "^29.7.0",
+    "microbundle": "^0.15.1",
+    "prettier": "^3.3.3",
+    "ts-jest": "^29.2.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.1.6"
   },
   "eslintConfig": {
     "env": {
@@ -35,27 +58,77 @@
     },
     "extends": "eslint:recommended",
     "rules": {
-      "array-bracket-spacing": [ "error", "always" ],
-      "comma-dangle": [ "error", "always-multiline" ],
-      "comma-spacing": [ "error" ],
-      "curly": [ "error", "multi-line" ],
-      "indent": [ "error", 4, { "SwitchCase": 1 } ],
-      "key-spacing": [ "error", { "align": "value" } ],
-      "keyword-spacing": [ "error" ],
+      "array-bracket-spacing": [
+        "error",
+        "always"
+      ],
+      "comma-dangle": [
+        "error",
+        "always-multiline"
+      ],
+      "comma-spacing": [
+        "error"
+      ],
+      "curly": [
+        "error",
+        "multi-line"
+      ],
+      "indent": [
+        "error",
+        4,
+        {
+          "SwitchCase": 1
+        }
+      ],
+      "key-spacing": [
+        "error",
+        {
+          "align": "value"
+        }
+      ],
+      "keyword-spacing": [
+        "error"
+      ],
       "no-case-declarations": "warn",
-      "no-console": [ "warn", { "allow": [ "error", "info" ] } ],
+      "no-console": [
+        "warn",
+        {
+          "allow": [
+            "error",
+            "info"
+          ]
+        }
+      ],
       "no-irregular-whitespace": "warn",
       "no-redeclare": "warn",
       "no-shadow": "warn",
       "no-unused-vars": "warn",
       "no-var": "error",
-      "object-curly-spacing": [ "error", "always" ],
+      "object-curly-spacing": [
+        "error",
+        "always"
+      ],
       "prefer-const": "error",
-      "quotes": [ "error", "single", "avoid-escape" ],
-      "semi": [ "error", "always" ],
-      "space-before-blocks": [ "error", "always" ],
-      "space-in-parens": [ "error" ],
-      "strict": [ "error", "global" ]
+      "quotes": [
+        "error",
+        "single",
+        "avoid-escape"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ],
+      "space-before-blocks": [
+        "error",
+        "always"
+      ],
+      "space-in-parens": [
+        "error"
+      ],
+      "strict": [
+        "error",
+        "global"
+      ]
     }
   }
 }
