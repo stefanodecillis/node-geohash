@@ -1,11 +1,20 @@
+
+
 geohash
 =======
+<p>
+<a href="https://twitter.com/stefanodecillis" rel="nofollow"><img src="https://img.shields.io/badge/created%20by-@stefanodecillis-4BBAAB.svg" alt="Created by Stefano De Cillis"></a>
+<a href="https://opensource.org/licenses/MIT" rel="nofollow"><img src="https://img.shields.io/github/license/stefanodecillis/node-geohash" alt="License"></a>
+<a href="https://www.npmjs.com/package/node-geohash" rel="nofollow"><img src="https://img.shields.io/npm/dw/zod.svg" alt="npm"></a>
+<a href="https://github.com/stefanodecillis/node-geohash" rel="nofollow"><img src="https://img.shields.io/github/stars/stefanodecillis/node-geohash" alt="stars"></a>
+</p>
+
+> This package is based on [latlon-geohash](https://github.com/chrisveness/latlon-geohash) by [Chris Veness](https://github.com/chrisveness) 
+> adapted and refactored for TypeScript applications. Original code is under MIT License.
+
 
 Functions to convert a [geohash](http://en.wikipedia.org/wiki/Geohash) to/from a latitude/longitude
 point, and to determine bounds of a geohash cell and find neighbours of a geohash.
-
-Note this version 2 uses ES classes and modules: for older browsers (or Node.js <8.0.0), 
-[v1.1.0](https://github.com/chrisveness/latlon-geohash/tree/v1.1.0) is ES5-based.
 
 API
 ---
@@ -30,46 +39,16 @@ If you want the geohash converted from Base32 to Base4, you can e.g.:
     parseInt(Geohash.encode(52.20, 0.12, 6), 32).toString(4);
 
 
-Usage in browser
+Usage
 ----------------
 
-Geohash can be used in the browser by taking a local copy, or loading it from
-    [jsDelivr](https://www.jsdelivr.com/package/npm/latlon-geohash): for example,
-
-```html
-<!doctype html><title>geohash example</title><meta charset="utf-8">
-<script type="module">
-    import Geohash from 'https://cdn.jsdelivr.net/npm/latlon-geohash@2.0.0';
-
-    const geohash = Geohash.encode(52.20, 0.12, 6);
-    console.assert(geohash == 'u120fw');
-
-    const latlon = Geohash.decode('u120fw');
-    console.assert(JSON.stringify(latlon) == '{"lat":52.1988,"lon":0.115}');
-</script>
-```
-
-
-Usage in Node.js
-----------------
-
-Geohash can be used in a Node.js app from [npm](https://www.npmjs.com/package/latlon-geohash) 
-(currently the [esm](https://www.npmjs.com/package/esm) package is required to load ES-modules):
+Geohash can be used in a Node.js app from [npm](https://www.npmjs.com/package/node-geohash):
 
 ```shell
-$ npm install latlon-geohash esm
-$ node -r esm
-> import Geohash from 'latlon-geohash';
+$ npm install node-geohash 
+> import Geohash from 'node-geohash';
 > const geohash = Geohash.encode(52.20, 0.12, 6);
 > console.assert(geohash == 'u120fw');
 > const latlon = Geohash.decode('u120fw');
 > console.assert(JSON.stringify(latlon) == '{"lat":52.1988,"lon":0.115}');
 ```
-
-Further details
----------------
-
-More information (with interactive conversion) at
-[www.movable-type.co.uk/scripts/geohash.html](http://www.movable-type.co.uk/scripts/geohash.html).
-
-Full JsDoc at [www.movable-type.co.uk/scripts/js/latlon-geohash/docs/Geohash.html](http://www.movable-type.co.uk/scripts/js/latlon-geohash/docs/Geohash.html).
